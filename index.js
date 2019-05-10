@@ -7,9 +7,10 @@ module.exports = {
       ],
       parser: 'babel-eslint',
       rules: {
+        // No need to convert between OS platforms
         'linebreak-style': 'off',
         'require-await': 'error',
-        'no-use-before-define': ['error', { 'functions': true, 'classes': true, 'variables': false }],
+        // Allow dev dependencies to be explicitly required in tools and such
         'import/no-extraneous-dependencies': ['error', {'devDependencies': true}],
         'padding-line-between-statements': [
             'error',
@@ -24,20 +25,12 @@ module.exports = {
     },
     react: {
       extends: [
-        'plugin:@heed/heed/recommended',
-        'airbnb'
+        'airbnb',
+        "prettier/react",
+        'plugin:@heed/heed/recommended'
       ],
       rules: {
-        'react/jsx-closing-bracket-location': 'off',
-        'react/jsx-closing-tag-location': 'off',
-        'react/jsx-filename-extension': ['error', { 'extensions': ['.js', '.jsx'] }],
-        'react/jsx-first-prop-new-line': 'off',
-        'react/jsx-indent': 'off',
-        'react/jsx-indent-props': 'off',
-        'react/jsx-max-props-per-line': 'off',
-        'react/jsx-one-expression-per-line': 'off',
-        'react/jsx-tag-spacing': 'off',
-        'react/jsx-wrap-multilines': 'off',
+        // Allows custom prop type declarations and hoisting common prop types into other variables
         'react/no-typos': 'off',
       },
       settings: {
@@ -53,6 +46,11 @@ module.exports = {
         'plugin:@heed/heed/react'
       ],
       rules: {
+        // Asset requiring uses inline require() calls
+        'global-require': 'off',
+        // Primarily for StyleSheet definitions since the convention is to define them after the component
+        'no-use-before-define': ['error', { 'functions': true, 'classes': true, 'variables': false }],
+        'react/jsx-filename-extension': ['error', { 'extensions': ['.js', '.jsx'] }],
         'react-native/no-unused-styles': 'error',
         'react-native/no-inline-styles': 'error',
         'react-native/no-color-literals': 'error',
@@ -83,6 +81,10 @@ module.exports = {
           }
         }
       ],
+      rules: {
+        // Allow inline requireing when using doMock conventions
+        'global-require': 'off',
+      }
     },
     testing: {
       extends: [
