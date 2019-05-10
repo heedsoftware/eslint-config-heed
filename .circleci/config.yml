@@ -1,0 +1,51 @@
+version: 2.1
+
+executors:
+  node_8:
+    working_directory: ~/workspace
+    docker:
+      - image: circleci/node:8
+
+commands:
+  attach_to_workspace:
+    description: Attach to the workflow workspace for sharing dependencies etc
+    steps:
+      - attach_workspace:
+          at: ~/workspace
+
+  yarn_install:
+    description: Install and cache dependencies using yarn
+    steps:
+      - restore_cache:
+          name: 'Restoring Dependencies Cache'
+          keys:
+            - dependency-cache-v1-{{ arch }}-{{ .Branch }}-{{ checksum "package.json" }}
+            - dependency-cache-v1-{{ arch }}-{{ .Branch }}
+            - dependency-cache-v1-{{ arch }}
+
+      - run:
+          name: Install dependencies
+          command: yarn install
+
+      - save_cache:
+          name: 'Saving Dependencies Cache'
+          key: dependency-cache-v1-{{ arch }}-{{ .Branch }}-{{ checksum "package.json" }}
+          paths:
+            - node_modules
+
+jobs:
+  publish:
+    executor: node_8
+    steps:
+      - checkout
+      - attach_to_workspace
+      - yarn_install
+      - run:
+          name: Publish semantic release to npm and GitHub
+          command: yarn run publish
+
+workflows:
+  version: 2
+  publish_release:
+    jobs:
+      - publish

@@ -1,0 +1,46 @@
+{
+  "name": "@heed/eslint-plugin-heed",
+  "version": "2.0.0",
+  "description": "Heed organisational linting rules for ESLint",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/heedsoftware/eslint-plugin-heed"
+  },
+  "main": "index.js",
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "release": {
+    "verifyConditions": "condition-circle"
+  },
+  "publishConfig": {
+    "access": "restricted"
+  },
+  "scripts": {
+    "commit": "git-cz",
+    "publish": "semantic-release"
+  },
+  "dependencies": {
+    "babel-eslint": "8.2.x",
+    "eslint-config-prettier": "2.9.x",
+    "eslint-config-semistandard": "12.0.x",
+    "eslint-config-standard": "11.0.x",
+    "eslint-plugin-ava": "4.5.x",
+    "eslint-plugin-import": "2.9.x",
+    "eslint-plugin-jest": "21.15.x",
+    "eslint-plugin-node": "6.0.x",
+    "eslint-plugin-prettier": "2.6.x",
+    "eslint-plugin-promise": "3.7.x",
+    "eslint-plugin-react": "7.7.x",
+    "eslint-plugin-standard": "3.0.x"
+  },
+  "devDependencies": {
+    "commitizen": "^3.1.1",
+    "condition-circle": "^2.0.2",
+    "cz-conventional-changelog": "^2.1.0",
+    "semantic-release": "^15.13.12"
+  }
+}
