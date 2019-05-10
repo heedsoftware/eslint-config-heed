@@ -25,17 +25,16 @@
   },
   "dependencies": {
     "babel-eslint": "8.2.x",
-    "eslint-config-prettier": "2.9.x",
-    "eslint-config-semistandard": "12.0.x",
-    "eslint-config-standard": "11.0.x",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-config-prettier": "^3.3.0",
     "eslint-plugin-ava": "4.5.x",
-    "eslint-plugin-import": "2.9.x",
-    "eslint-plugin-jest": "21.15.x",
-    "eslint-plugin-node": "6.0.x",
-    "eslint-plugin-prettier": "2.6.x",
-    "eslint-plugin-promise": "3.7.x",
-    "eslint-plugin-react": "7.7.x",
-    "eslint-plugin-standard": "3.0.x"
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jest": "^22.1.2",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-react": "^7.12.3",
+    "eslint-plugin-react-native": "^3.7.0"
   },
   "devDependencies": {
     "commitizen": "^3.1.1",
