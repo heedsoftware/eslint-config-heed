@@ -1,8 +1,7 @@
 module.exports = {
   configs: {
-    recommended: {
+    base: {
       extends: [
-        'airbnb-base',
         'plugin:prettier/recommended',
       ],
       parser: 'babel-eslint',
@@ -23,11 +22,17 @@ module.exports = {
         ]
       }
     },
+    recommended: {
+      extends: [
+        'airbnb-base',
+        'plugin:@heed/heed/base'
+      ],
+    },
     react: {
       extends: [
         'airbnb',
+        'plugin:@heed/heed/base',
         "prettier/react",
-        'plugin:@heed/heed/recommended'
       ],
       rules: {
         // Allows custom prop type declarations and hoisting common prop types into other variables
