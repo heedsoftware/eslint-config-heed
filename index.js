@@ -75,6 +75,7 @@ module.exports = {
       overrides: [
         {
           files: [
+            'setupTests.js',
             '**/*.spec.js',
             '**/__mocks__/**',
             '**/__test_helpers__/**',
@@ -83,13 +84,13 @@ module.exports = {
           ],
           env: {
             'jest/globals': true
+          },
+          rules: {
+            // Allow inline require() when using doMock conventions
+            'global-require': 'off',
           }
         }
-      ],
-      rules: {
-        // Allow inline requireing when using doMock conventions
-        'global-require': 'off',
-      }
+      ]
     },
     testing: {
       extends: [
