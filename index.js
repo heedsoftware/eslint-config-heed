@@ -11,6 +11,8 @@ module.exports = {
         'require-await': 'error',
         // Allow dev dependencies to be explicitly required in tools and such
         'import/no-extraneous-dependencies': ['error', {'devDependencies': true}],
+        // Allow mongo id fields
+        'no-underscore-dangle': ["error", { "allow": ["_id"] }],
         'padding-line-between-statements': [
             'error',
             {
