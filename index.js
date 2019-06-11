@@ -13,6 +13,8 @@ module.exports = {
         'import/no-extraneous-dependencies': ['error', {'devDependencies': true}],
         // Allow mongo id fields
         'no-underscore-dangle': ["error", { "allow": ["_id"] }],
+        // Allow functions to be defined anywhere
+        'no-use-before-define': ['error', { 'functions': false, 'classes': true, 'variables': true }],
         'padding-line-between-statements': [
             'error',
             {
