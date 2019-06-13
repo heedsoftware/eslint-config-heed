@@ -38,6 +38,9 @@ module.exports = {
         'plugin:@heed/heed/base',
         "prettier/react",
       ],
+      env: {
+        'browser': true
+      },
       rules: {
         // Allows custom prop type declarations and hoisting common prop types into other variables
         'react/no-typos': 'off',
