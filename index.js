@@ -12,7 +12,7 @@ module.exports = {
         // Allow dev dependencies to be explicitly required in tools and such
         'import/no-extraneous-dependencies': ['error', {'devDependencies': true}],
         // Allow mongo id fields
-        'no-underscore-dangle': ["error", { "allow": ["_id"] }],
+        'no-underscore-dangle': ['error', { 'allow': ['_id'] }],
         // Allow functions to be defined anywhere
         'no-use-before-define': ['error', { 'functions': false, 'classes': true, 'variables': true }],
         'padding-line-between-statements': [
@@ -36,7 +36,7 @@ module.exports = {
       extends: [
         'airbnb',
         'plugin:@heed/heed/base',
-        "prettier/react",
+        'prettier/react',
       ],
       env: {
         'browser': true
@@ -44,6 +44,8 @@ module.exports = {
       rules: {
         // Allows custom prop type declarations and hoisting common prop types into other variables
         'react/no-typos': 'off',
+        // allow usage of tagged templates such as injectGlobal from styled-components
+        'no-unused-expressions': ['error', { 'allowTaggedTemplates': true }]
       },
       settings: {
         react: {
