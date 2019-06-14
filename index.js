@@ -74,7 +74,7 @@ module.exports = {
       },
     },
     jest: {
-      plugins: [,
+      plugins: [
         'jest',
         'jest-formatting'
       ],
