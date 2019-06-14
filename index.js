@@ -74,12 +74,20 @@ module.exports = {
       },
     },
     jest: {
-      plugins: ['jest'],
+      plugins: [,
+        'jest',
+        'jest-formatting'
+      ],
       extends: [
-        'plugin:jest/recommended'
+        'plugin:jest/recommended',
+        'plugin:jest/style'
       ],
       env: {
         'jest/globals': false
+      },
+      rules: {
+        'jest-formatting/padding-before-test-blocks': 'error',
+        'jest-formatting/padding-before-describe-blocks': 'error'
       },
       overrides: [
         {
