@@ -93,6 +93,7 @@ module.exports = {
         {
           files: [
             'setupTests.js',
+            'test-setup-*.browser.js',
             '**/*.spec.js',
             '**/__mocks__/**',
             '**/__test_helpers__/**',
