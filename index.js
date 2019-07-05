@@ -23,6 +23,15 @@ module.exports = {
                 'next': '*'
             },
             { 'blankLine': 'any', 'prev': ['export', 'import'], 'next': ['export', 'import'] }
+        ],
+        // Allow not to destructure an object when assigning to an already existing variable
+        'prefer-destructuring': [
+          'error',
+          {
+            'VariableDeclarator': { 'array': true, 'object': true },
+            'AssignmentExpression': { 'array': true, 'object': false }
+          },
+          { enforceForRenamedProperties: false, }
         ]
       }
     },
