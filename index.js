@@ -63,6 +63,12 @@ module.exports = {
         }
       },
     },
+    'react-hooks': {
+      extends: [
+        'plugin:@heed/heed/react',
+        'airbnb/hooks'
+      ],
+    },
     'react-native': {
       plugins: ['react-native'],
       extends: [
@@ -89,14 +95,11 @@ module.exports = {
       ],
       extends: [
         'plugin:jest/recommended',
-        'plugin:jest/style'
+        'plugin:jest/style',
+        'plugin:jest-formatting/recommended'
       ],
       env: {
         'jest/globals': false
-      },
-      rules: {
-        'jest-formatting/padding-before-test-blocks': 'error',
-        'jest-formatting/padding-before-describe-blocks': 'error'
       },
       overrides: [
         {
