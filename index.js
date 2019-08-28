@@ -54,7 +54,9 @@ module.exports = {
         // Allows custom prop type declarations and hoisting common prop types into other variables
         'react/no-typos': 'off',
         // allow usage of tagged templates such as injectGlobal from styled-components
-        'no-unused-expressions': ['error', { 'allowTaggedTemplates': true }]
+        'no-unused-expressions': ['error', { 'allowTaggedTemplates': true }],
+        // allow the unsafe lifecycle methods prefixed with UNSAFE_
+        'camelcase': ['error', { allow: ['^UNSAFE_'] }],
       },
       settings: {
         react: {
