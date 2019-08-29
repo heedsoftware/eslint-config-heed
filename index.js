@@ -109,6 +109,11 @@ module.exports = {
       env: {
         'jest/globals': false
       },
+      rules: {
+        // Allow padding before beforeAll and beforeEach blocks as we often declare variables there to be initialised within the block
+        'jest-formatting/padding-around-before-all-blocks': 'off',
+        'jest-formatting/padding-around-before-each-blocks': 'off'
+      },
       overrides: [
         {
           files: [
