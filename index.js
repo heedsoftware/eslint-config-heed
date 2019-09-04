@@ -56,7 +56,7 @@ module.exports = {
         // allow usage of tagged templates such as injectGlobal from styled-components
         'no-unused-expressions': ['error', { 'allowTaggedTemplates': true }],
         // allow the unsafe lifecycle methods prefixed with UNSAFE_
-        'camelcase': ['error', { allow: ['^UNSAFE_'] }],
+        'camelcase': ['error', { properties: 'never', ignoreDestructuring: false, allow: ['^UNSAFE_'] }],
         // allow spreading jsx props when being used within a hoc
         'react/jsx-props-no-spreading': [{
           'html': 'enforce',
