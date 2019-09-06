@@ -1,8 +1,10 @@
 module.exports = {
   configs: {
     base: {
+      plugins: ['lodash'],
       extends: [
         'plugin:prettier/recommended',
+        'plugin:lodash/recommended',
       ],
       parser: 'babel-eslint',
       rules: {
