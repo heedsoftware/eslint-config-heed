@@ -4,7 +4,6 @@ module.exports = {
       plugins: ['lodash'],
       extends: [
         'plugin:prettier/recommended',
-        'plugin:lodash/recommended',
       ],
       parser: 'babel-eslint',
       rules: {
@@ -34,7 +33,13 @@ module.exports = {
             'AssignmentExpression': { 'array': true, 'object': false }
           },
           { enforceForRenamedProperties: false, }
-        ]
+        ],
+        'lodash/import-scope': ['error', 'method'],
+        'lodash/prefer-compact': 'error',
+        'lodash/prefer-immutable-method': 'error',
+        'lodash/prefer-is-nil': 'error',
+        'lodash/prefer-lodash-typecheck': 'error',
+        'lodash/prefer-noop': 'error',
       }
     },
     recommended: {
