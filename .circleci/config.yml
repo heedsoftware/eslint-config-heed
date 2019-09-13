@@ -48,4 +48,8 @@ workflows:
   version: 2
   publish_release:
     jobs:
-      - publish
+      - publish:
+          filters:
+            branches:
+              only:
+                - master       
