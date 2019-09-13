@@ -11,7 +11,7 @@ module.exports = {
         'linebreak-style': 'off',
         'require-await': 'error',
         // Allow dev dependencies to be explicitly required in tools and such
-        'import/no-extraneous-dependencies': ['error', {'devDependencies': true}],
+        'import/no-extraneous-dependencies': ['error', { 'devDependencies': true }],
         // Allow mongo id fields
         'no-underscore-dangle': ['error', { 'allow': ['_id'] }],
         // Allow functions to be defined anywhere
@@ -65,11 +65,7 @@ module.exports = {
         // allow the unsafe lifecycle methods prefixed with UNSAFE_
         'camelcase': ['error', { properties: 'never', ignoreDestructuring: false, allow: ['^UNSAFE_'] }],
         // allow spreading jsx props when being used within a hoc
-        'react/jsx-props-no-spreading': [{
-          'html': 'enforce',
-          'custom': 'enforce',
-          'exceptions': ['WrappedComponent']
-        }],
+        'react/jsx-props-no-spreading': ['error', { 'html': 'enforce', 'custom': 'enforce', 'exceptions': ['WrappedComponent'] }],
       },
       settings: {
         react: {
