@@ -65,7 +65,7 @@ module.exports = {
         // allow the unsafe lifecycle methods prefixed with UNSAFE_
         'camelcase': ['error', { properties: 'never', ignoreDestructuring: false, allow: ['^UNSAFE_'] }],
         // allow spreading jsx props when being used within a hoc
-        'react/jsx-props-no-spreading': ['error', { 'html': 'enforce', 'custom': 'enforce', 'exceptions': ['WrappedComponent'] }],
+        'react/jsx-props-no-spreading': ['error', { 'html': 'enforce', 'custom': 'enforce', 'exceptions': ['WrappedComponent', 'IntegrationWrapper'] }],
       },
       settings: {
         react: {
