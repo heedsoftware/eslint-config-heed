@@ -1,6 +1,6 @@
 module.exports = {
   extends: [
-    '@heed/heed/react',
+    './shared/react',
     'airbnb/hooks'
   ],
 }

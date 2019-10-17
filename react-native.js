@@ -1,7 +1,7 @@
 module.exports = {
   plugins: ['react-native'],
   extends: [
-    '@heed/heed/react'
+    './shared/react'
   ],
   rules: {
     // Asset requiring uses inline require() calls
