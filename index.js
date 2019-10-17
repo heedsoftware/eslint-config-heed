@@ -138,12 +138,5 @@ module.exports = {
         }
       ]
     },
-    testing: {
-      extends: [
-        'plugin:jest/recommended',
-        'plugin:ava/recommended'
-      ],
-      plugins: ['ava']
-    }
   }
 };

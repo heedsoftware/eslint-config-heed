@@ -1,2 +1,2 @@
-# eslint-plugin-heed
-Heed plugin for ESLint
+# eslint-config-heed
+ESLint configuration for Heed Software

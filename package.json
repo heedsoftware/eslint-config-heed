@@ -1,11 +1,11 @@
 {
-  "name": "@heed/eslint-plugin-heed",
+  "name": "@heed/eslint-config-heed",
   "version": "2.0.0",
   "description": "Heed organisational linting rules for ESLint",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/heedsoftware/eslint-plugin-heed"
+    "url": "https://github.com/heedsoftware/eslint-config-heed"
   },
   "main": "index.js",
   "config": {
