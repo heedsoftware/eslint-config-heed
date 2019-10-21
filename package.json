@@ -17,7 +17,7 @@
     "verifyConditions": "condition-circle"
   },
   "publishConfig": {
-    "access": "restricted"
+    "access": "public"
   },
   "scripts": {
     "commit": "git-cz",
