@@ -4,7 +4,7 @@ executors:
   node_8:
     working_directory: ~/workspace
     docker:
-      - image: circleci/node:8
+      - image: circleci/node:14.18.2
 
 commands:
   attach_to_workspace:
