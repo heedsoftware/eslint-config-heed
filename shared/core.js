@@ -3,7 +3,7 @@ module.exports = {
   extends: [
     'plugin:prettier/recommended',
   ],
-  parser: 'babel-eslint',
+  parser: '@babel/eslint-parser',
   rules: {
     // No need to convert between OS platforms
     'linebreak-style': 'off',

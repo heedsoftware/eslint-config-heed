@@ -24,26 +24,26 @@
     "publish": "semantic-release"
   },
   "dependencies": {
-    "babel-eslint": "^10.1.0",
+    "@babel/eslint-parser": "^7.18.2",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-jest": "^26.1.5",
+    "eslint-plugin-jest": "^26.5.3",
     "eslint-plugin-jest-formatting": "^3.1.0",
-    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-jsx-a11y": "^6.6.0",
     "eslint-plugin-lodash": "^7.4.0",
-    "eslint-plugin-prettier": "^4.0.0",
-    "eslint-plugin-react": "^7.29.4",
-    "eslint-plugin-react-hooks": "^4.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.30.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-native": "^4.0.0"
   },
   "devDependencies": {
     "commitizen": "^4.2.4",
     "condition-circle": "2.0.2",
-    "cz-conventional-changelog": "2.1.0",
-    "eslint": "^8.14.0",
-    "semantic-release": "15.13.12"
+    "cz-conventional-changelog": "3.3.0",
+    "eslint": "^8.19.0",
+    "semantic-release": "19.0.3"
   },
   "peerDependencies": {
     "eslint": ">= 6.1.0",
