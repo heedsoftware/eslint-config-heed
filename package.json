@@ -12,10 +12,7 @@
     "commitizen": {
       "path": "cz-conventional-changelog"
     }
-  },
-  "release": {
-    "verifyConditions": "condition-circle"
-  },
+  },  
   "publishConfig": {
     "access": "public"
   },
@@ -40,7 +37,6 @@
   },
   "devDependencies": {
     "commitizen": "^4.2.4",
-    "condition-circle": "2.0.2",
     "cz-conventional-changelog": "3.3.0",
     "eslint": "^8.19.0",
     "semantic-release": "19.0.3"
