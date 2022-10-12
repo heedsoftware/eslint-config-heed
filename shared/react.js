@@ -2,7 +2,7 @@ module.exports = {
   extends: [
     'airbnb',
     './core',
-    'prettier/react',
+    // 'prettier/react',
   ],
   env: {
     'browser': true
